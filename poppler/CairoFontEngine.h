@@ -32,6 +32,7 @@
 
 #include <mutex>
 
+#include "poppler_export.h"
 #include "poppler-config.h"
 #include <cairo-ft.h>
 
@@ -40,7 +41,7 @@
 
 class CairoFontEngine;
 
-class CairoFont
+class POPPLER_EXPORT CairoFont
 {
 public:
     CairoFont(Ref refA, cairo_font_face_t *cairo_font_faceA, int *codeToGIDA, unsigned int codeToGIDLenA, bool substituteA, bool printingA);
@@ -68,7 +69,7 @@ protected:
 
 //------------------------------------------------------------------------
 
-class CairoFreeTypeFont : public CairoFont
+class POPPLER_EXPORT CairoFreeTypeFont : public CairoFont
 {
 public:
     static CairoFreeTypeFont *create(GfxFont *gfxFont, XRef *xref, FT_Library lib, bool useCIDs);
@@ -80,7 +81,7 @@ private:
 
 //------------------------------------------------------------------------
 
-class CairoType3Font : public CairoFont
+class POPPLER_EXPORT CairoType3Font : public CairoFont
 {
 public:
     static CairoType3Font *create(GfxFont *gfxFont, PDFDoc *doc, CairoFontEngine *fontEngine, bool printing, XRef *xref);
@@ -100,7 +101,7 @@ private:
 // CairoFontEngine
 //------------------------------------------------------------------------
 
-class CairoFontEngine
+class POPPLER_EXPORT CairoFontEngine
 {
 public:
     // Create a font engine.

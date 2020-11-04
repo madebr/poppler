@@ -42,7 +42,9 @@
 
 #include <cairo.h>
 
-class CairoRescaleBox
+#include "poppler_export.h"
+
+class POPPLER_EXPORT CairoRescaleBox
 {
 public:
     CairoRescaleBox() {};

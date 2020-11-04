@@ -36,6 +36,7 @@
 #ifndef GooString_H
 #define GooString_H
 
+#include "poppler_export.h"
 #include <cstdarg>
 #include <string>
 

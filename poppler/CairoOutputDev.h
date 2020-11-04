@@ -36,6 +36,7 @@
 #define CAIROOUTPUTDEV_H
 
 #include <cairo-ft.h>
+#include "poppler_export.h"
 #include "OutputDev.h"
 #include "TextOutputDev.h"
 #include "GfxState.h"
@@ -53,7 +54,7 @@ class CairoFont;
 //------------------------------------------------------------------------
 // CairoImage
 //------------------------------------------------------------------------
-class CairoImage
+class POPPLER_EXPORT CairoImage
 {
 public:
     // Constructor.
@@ -90,7 +91,7 @@ private:
 // CairoOutputDev
 //------------------------------------------------------------------------
 
-class CairoOutputDev : public OutputDev
+class POPPLER_EXPORT CairoOutputDev : public OutputDev
 {
 public:
     // Constructor.
@@ -351,7 +352,7 @@ protected:
 //------------------------------------------------------------------------
 
 // XXX: this should ideally not inherit from CairoOutputDev but use it instead perhaps
-class CairoImageOutputDev : public CairoOutputDev
+class POPPLER_EXPORT CairoImageOutputDev : public CairoOutputDev
 {
 public:
     // Constructor.
